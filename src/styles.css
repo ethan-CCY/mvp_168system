@@ -1,0 +1,317 @@
+:root {
+  color-scheme: light;
+  font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef2f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #c8d2dc;
+  background: #ffffff;
+  color: #1f2933;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+}
+
+button:hover {
+  border-color: #64748b;
+}
+
+input, select {
+  min-height: 38px;
+  border: 1px solid #c8d2dc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #ffffff;
+  min-width: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr);
+}
+
+.sidebar {
+  background: #24313d;
+  color: #ffffff;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 10px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar button {
+  width: 100%;
+  justify-content: flex-start;
+  background: transparent;
+  border-color: transparent;
+  color: #dbe5ef;
+}
+
+.sidebar button.active,
+.sidebar button:hover {
+  background: #334554;
+  border-color: #42586a;
+  color: #ffffff;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+}
+
+main {
+  min-width: 0;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+header p {
+  margin: 2px 0 0;
+  color: #687789;
+}
+
+section {
+  display: grid;
+  gap: 16px;
+}
+
+.toolbar,
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.search-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  border: 1px solid #c8d2dc;
+  border-radius: 6px;
+  padding: 0 10px;
+  background: #ffffff;
+  flex: 1 1 260px;
+}
+
+.search-box input {
+  border: 0;
+  padding-left: 0;
+  flex: 1;
+  min-height: 34px;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+}
+
+.check input {
+  min-height: 0;
+}
+
+.form-grid input,
+.form-grid select {
+  flex: 1 1 160px;
+}
+
+.primary {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
+
+.danger {
+  color: #991b1b;
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+  color: #8794a3;
+  background: #f3f6f9;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #e5ebf1;
+  padding: 11px 12px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+th {
+  color: #526173;
+  background: #f7f9fb;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.green {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status.yellow {
+  color: #854d0e;
+  background: #fef3c7;
+}
+
+.status.red {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.ok {
+  color: #166534;
+}
+
+.warn {
+  color: #b45309;
+}
+
+.toast {
+  background: #e0f2fe;
+  color: #075985;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #eef2f6;
+  padding: 20px;
+}
+
+.login-panel {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.login-panel label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.error {
+  margin: 0;
+  color: #b91c1c;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .sidebar nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main {
+    padding: 16px;
+  }
+}
