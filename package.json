@@ -12,9 +12,7 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "seed": "node prisma/seed.js",
-    "security:review": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/security-review.ps1 -Mode all",
-    "security:staged": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/security-review.ps1 -Mode staged"
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
