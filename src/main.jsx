@@ -353,7 +353,9 @@ function Plans({ api, flash }) {
         <button onClick={load}><RefreshCw size={16} />刷新</button>
       </Toolbar>
       <FormGrid onSubmit={submit}>
-        <input placeholder="方案名稱" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+        <LabeledField label="方案名稱">
+          <input placeholder="輸入方案名稱" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+        </LabeledField>
         <NumberInput label="金額" value={form.amount} onChange={(amount) => setForm({ ...form, amount })} />
         <NumberInput label="財香扣抵" value={form.fortune_incense_deduct_qty} onChange={(v) => setForm({ ...form, fortune_incense_deduct_qty: v })} />
         <NumberInput label="碧玉香扣抵" value={form.jade_incense_deduct_qty} onChange={(v) => setForm({ ...form, jade_incense_deduct_qty: v })} />
@@ -646,7 +648,20 @@ function Table({ headers, children }) {
 }
 
 function NumberInput({ label, value, onChange }) {
-  return <input type="number" placeholder={label} value={value} onChange={(e) => onChange(Number(e.target.value))} />;
+  return (
+    <LabeledField label={label}>
+      <input type="number" placeholder={label} value={value} onChange={(e) => onChange(Number(e.target.value))} />
+    </LabeledField>
+  );
+}
+
+function LabeledField({ label, children }) {
+  return (
+    <label className="field">
+      <span>{label}</span>
+      {children}
+    </label>
+  );
 }
 
 function Select({ value, onChange, options, placeholder, disabled }) {

@@ -169,6 +169,24 @@ section {
   flex: 1 1 160px;
 }
 
+.form-grid .field {
+  flex: 1 1 160px;
+  display: grid;
+  gap: 6px;
+  color: #526173;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-grid .field input,
+.form-grid .field select {
+  width: 100%;
+  flex: none;
+  color: #1f2933;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .primary {
   background: #0f766e;
   border-color: #0f766e;
